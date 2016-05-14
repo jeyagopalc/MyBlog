@@ -8,7 +8,7 @@ import org.mongodb.morphia.annotations.Indexes;
 
 /**
  * User of a particular site
- * @author maruthir
+ * @author jeyagopalc
  *
  */
 @Entity("users")
