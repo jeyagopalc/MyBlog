@@ -27,7 +27,7 @@ public class AuthFilter implements Filter {
 		HttpServletRequest hreq = (HttpServletRequest) req;
 		HttpServletResponse hres = (HttpServletResponse) res;
 		// dont check for authenitication on requests for signup
-		// REPLACE WITH YOUR OWN URLS
+		// REPLACE WITH YOUR OWN URLS 
 		/*if (hreq.getRequestURI().contains("/registration")) {
 			chain.doFilter(req, res);
 			return;
@@ -39,6 +39,9 @@ public class AuthFilter implements Filter {
 			chain.doFilter(req, res);
 			return;
 		}
+		
+		System.out.println("New user");
+		
 		// Not an already authenticated user, check for credentials
 		// Get basic auth header
 		String basicAuthHeader = hreq.getHeader("Authorization");
