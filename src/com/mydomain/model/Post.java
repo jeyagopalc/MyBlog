@@ -19,7 +19,7 @@ public class Post {
 	@Id
     private ObjectId id;
     private String title;
-    private String description;
+    private List<Description> descriptions;
     private List<ImageInfo> imageInfos;
     private String by;
     private Date date_created;
@@ -40,13 +40,13 @@ public class Post {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getDescription() {
-		return description;
+		
+	public List<Description> getDescriptions() {
+		return descriptions;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setDescriptions(List<Description> descriptions) {
+		this.descriptions = descriptions;
 	}
-	
 	public List<ImageInfo> getImageInfos() {
 		return imageInfos;
 	}
@@ -92,7 +92,7 @@ public class Post {
 	}
 	@Override
 	public String toString() {
-		return "Post [id=" + id + ", title=" + title + ", description=" + description + ", imageInfos=" + imageInfos
+		return "Post [id=" + id + ", title=" + title + ", description=" + descriptions + ", imageInfos=" + imageInfos
 				+ ", by=" + by + ", date_created=" + date_created + ", category=" + category + ", tags=" + tags
 				+ ", likes=" + likes + ", comments=" + comments + "]";
 	}
