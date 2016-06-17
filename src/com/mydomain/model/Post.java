@@ -22,9 +22,11 @@ public class Post {
     private List<Description> descriptions;
     private List<ImageInfo> imageInfos;
     private String by;
+    private String bio;
+    private String thumbnail;
     private Date date_created;
     private String category;
-    private List<String> tags;
+    private String tag;
     private Integer likes;
     private List<Comment> comments;
     
@@ -60,6 +62,18 @@ public class Post {
 		this.by = by;
 	}
 	
+	public String getBio() {
+		return bio;
+	}
+	public void setBio(String bio) {
+		this.bio = bio;
+	}
+	public String getThumbnail() {
+		return thumbnail;
+	}
+	public void setThumbnail(String thumbnail) {
+		this.thumbnail = thumbnail;
+	}
 	public Date getDate_created() {
 		return date_created;
 	}
@@ -72,11 +86,11 @@ public class Post {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public List<String> getTags() {
-		return tags;
+	public String getTag() {
+		return tag;
 	}
-	public void setTags(List<String> tags) {
-		this.tags = tags;
+	public void setTag(String tag) {
+		this.tag = tag;
 	}
 	public Integer getLikes() {
 		return likes;
@@ -93,7 +107,7 @@ public class Post {
 	@Override
 	public String toString() {
 		return "Post [id=" + id + ", title=" + title + ", description=" + descriptions + ", imageInfos=" + imageInfos
-				+ ", by=" + by + ", date_created=" + date_created + ", category=" + category + ", tags=" + tags
+				+ ", by=" + by + ", date_created=" + date_created + ", category=" + category + ", tag=" + tag
 				+ ", likes=" + likes + ", comments=" + comments + "]";
 	}
     

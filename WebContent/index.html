@@ -63,7 +63,7 @@
 						<ul class="nav navbar-nav navbar-right">
 						
 							<li>
-								<a href=""><strong>Home</strong></a>
+								<a href ng-click = 'getArticle()'><strong>Home</strong></a>
 								<a id = "signup" href="" ng-click = "toggleSignUpSignOut(signupText)"><strong>{{signupText}}</strong></a>
 								<i class="fa fa-plus" aria-hidden="true">Post</i>
 								<a href=""><strong>Contact</strong></a>
@@ -162,8 +162,8 @@
 				</div>				
 			</div>
 			<div class="content">
-				<div class ="container">
-					<div ng-view></div>
+				<div class ="container" ng-click = 'disableSignupPage()'>
+					<div class="ng-view" autoscroll="true"></div>
 				</div>
 			</div>
 			
