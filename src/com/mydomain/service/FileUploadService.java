@@ -24,8 +24,8 @@ public class FileUploadService {
 	public Boolean uploadFile(  
 		@FormDataParam("file") InputStream uploadedInputStream,  
 		@FormDataParam("file") FormDataContentDisposition fileDetail) {  
-		/*String fileLocation = "C://Jeyagopal_data/GitView/MyBlog/WebContent/assets/img/" + fileDetail.getFileName();*/
-		String fileLocation = "/usr/local/tomcat/webapps/MyBlog-0.0.1-SNAPSHOT/assets/img/" + fileDetail.getFileName();
+		String fileLocation = "C://Jeyagopal_data/GitView/MyBlog/WebContent/assets/img/" + fileDetail.getFileName();
+		/*String fileLocation = "/usr/local/tomcat/webapps/MyBlog-0.0.1-SNAPSHOT/assets/img/" + fileDetail.getFileName();*/
 		
 		System.out.println("--------------------------------------");
 		System.out.println(fileLocation);

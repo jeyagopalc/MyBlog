@@ -84,8 +84,17 @@
 		$scope.signupText = "";
 		$scope.showSignUpPage = false;
 		
+		
 		$scope. addPost = function(){
-			$location.path("/addpost");
+			$http.get('rest/signup').success(function(data, status, headers, config) {
+					$log.debug(data);
+					$location.path("/addpost");
+				}).error(function(data, status, headers, config) {
+
+					$('#myModal').modal('show');	
+					$log.debug("Issue in signout....");
+
+				});
 		}
 		
 		$scope.getArticle = function(){
