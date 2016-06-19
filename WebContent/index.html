@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
 		<link rel="stylesheet" href="assets/css/bloginfo.css">
 		<link rel="stylesheet" href="assets/css/blogpost.css">
-		
+		<link rel="stylesheet" href="assets/css/addpost.css">
 		<!-- Javascript -->
 		
 		<script src="bower_components/jquery/dist/jquery.js"></script>
@@ -65,7 +65,7 @@
 							<li>
 								<a href ng-click = 'getArticle()'><strong>Home</strong></a>
 								<a id = "signup" href="" ng-click = "toggleSignUpSignOut(signupText)"><strong>{{signupText}}</strong></a>
-								<i class="fa fa-plus" aria-hidden="true">Post</i>
+								<i class="fa fa-plus" aria-hidden="true" ng-click = 'addPost()'>Post</i>
 								<a href=""><strong>Contact</strong></a>
 							</li>
 							
