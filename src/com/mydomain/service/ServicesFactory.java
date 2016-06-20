@@ -23,6 +23,7 @@ public class ServicesFactory {
 			MongoClient mongoClient = new MongoClient(connectionString);	
 			Morphia morphia = new Morphia();
 			morphia.mapPackage("com.mydomain.model");
+			System.out.println("com.mydomain.model");
 			Datastore datastore = morphia.createDatastore(mongoClient, "MyBlogDb");
 			datastore.ensureIndexes();
 			mongoTL.set(datastore);
